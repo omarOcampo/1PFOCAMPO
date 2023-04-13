@@ -1,0 +1,30 @@
+
+<br/><div class="mb-3">
+  <button (click)="abrirAlumnos()" mat-flat-button color="warn">
+    <mat-icon>add</mat-icon>
+    Agregar Alumno
+  </button>
+</div>
+
+<table mat-table [dataSource]="dataSource">
+ 
+  <ng-container matColumnDef="nombreCompleto">
+    <th mat-header-cell *matHeaderCellDef> Nombre completo</th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario | nombreCompleto}} </td>
+  </ng-container>
+
+  <!-- curso Column -->
+  <ng-container matColumnDef="curso">
+    <th mat-header-cell *matHeaderCellDef> Curso </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.curso}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="carrera">
+    <th mat-header-cell *matHeaderCellDef> Carrera </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.carrera}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

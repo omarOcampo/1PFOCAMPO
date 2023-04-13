@@ -1,0 +1,26 @@
+
+<mat-drawer-container  class="example-container" autosize >
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <h2 appCambios>Nuestra Propuesta</h2>
+      <img src="https://img.freepik.com/fotos-premium/trabajador-industria-alimentaria-caucasica-cortando-pimiento-rojo-organico-fresco-mientras-cocina-deliciosa-comida-servicio-cena-restaurante-master-chef-cortando-verduras-cocina-profesional_482257-42007.jpg"/>
+     <p>¿Qué aprenderás en éste curso?
+      Te brindamos todos los conocimientos mas Certificaciones internacionales.  Contactos con Empresas para realizar pasantías en el exterior.<br/>
+      ¡Hemos estado allí y te lo recomendamos como experiencia de vida! <br/>
+      Te ofrecemos la mejor técnica y toda nuestra pasión. ¡El resto depende de vos!
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <mat-toolbar color="warn">
+        <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+         <mat-icon >menu</mat-icon>
+       </button>
+       <span appCambios>Mi lista de alumnos</span>
+       <span class="example-spacer"></span>
+      </mat-toolbar>
+      <!-- mi pagina -->
+      <main>
+         <app-alumnos></app-alumnos>
+      </main>
+    </div> 
+</mat-drawer-container>
+
