@@ -7,6 +7,7 @@ import { PanelModule } from './panel/panel.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { PanelModule } from './panel/panel.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    PanelModule
+    PanelModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

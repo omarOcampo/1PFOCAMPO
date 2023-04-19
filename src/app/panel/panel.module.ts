@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { AlumnosModule } from '../alumnos/alumnos.module';
 import { DirectivasModule } from '../directivas/directivas.module';
+import { AlumnosComponent } from '../alumnos/alumnos.component';
 
 
 
@@ -27,7 +28,8 @@ MatSidenavModule
     
   ],
   exports: [
-    PanelComponent
+    PanelComponent,
+    AlumnosComponent
   ]
 })
 export class PanelModule { 
